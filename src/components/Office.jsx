@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Office (props) {
-  const { nodes, materials } = useGLTF('public/models/Workstation.gltf')
+  const { nodes, materials } = useGLTF('models/Workstation.gltf')
 
   if (nodes) {
     Object.values(nodes).forEach((child) => {
@@ -80,4 +80,4 @@ export function Office (props) {
 )
 }
 
-useGLTF.preload('public/models/workstation.gltf')
+useGLTF.preload('models/workstation.gltf')

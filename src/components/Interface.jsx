@@ -47,13 +47,13 @@ const AboutSection = (props) => {
   const { setSection } = props;
   return (
     <Section mobileTop>
-      <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">
-        Hi, I'm
+      <h1 className="text-2xl md:text-2xl font-bold leading-snug mt-0 md:mt-1">
+        Hola, me llamo
         <br />
-        <span className="bg-white px-1 italic">Wawa Sensei</span>
+        <span className=" text-4xl md:text-6xl font-extrabold bg-cyan px-1 italic">Pepo Sabatini</span>
       </h1>
       <motion.p
-        className="text-lg text-gray-600 mt-4"
+        className="text-2g text-gray-900 mt-2"
         initial={{
           opacity: 0,
           y: 25,
@@ -67,9 +67,12 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I make YouTube videos to help developers
+         Me inspira el cine que cruza lenguajes
         <br />
-        learn how to build 3D apps
+        y amo la energía multidisciplinaria
+        <br />
+        con la cual podemos abordarlo.
+
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
@@ -88,7 +91,7 @@ const AboutSection = (props) => {
           delay: 2,
         }}
       >
-        Contact me
+        Contáctame
       </motion.button>
     </Section>
   );
@@ -96,39 +99,39 @@ const AboutSection = (props) => {
 
 const skills = [
   {
-    title: "Threejs / React Three Fiber",
-    level: 80,
-  },
-  {
-    title: "React / React Native",
-    level: 90,
-  },
-  {
-    title: "Nodejs",
-    level: 90,
-  },
-  {
-    title: "Typescript",
-    level: 60,
-  },
-  {
-    title: "3D Modeling",
-    level: 40,
-  },
+      title: "Filming / Directing",
+      level: 90,
+    },
+    {
+      title: "Creative Process",
+      level: 95,
+    },
+    {
+      title: "Scripting",
+      level: 85,
+    },
+    {
+      title: "Art Direction",
+      level: 60,
+    },
+    {
+      title: "PostProduction ",
+      level: 66,
+    },
 ];
 const languages = [
   {
-    title: "🇫🇷 French",
-    level: 100,
-  },
-  {
-    title: "🇺🇸 English",
-    level: 80,
-  },
-  {
-    title: "🇯🇵 Japanese",
-    level: 20,
-  },
+      title: "Fiction",
+      level: 100,
+    },
+    {
+      title: "3D Animation",
+      level: 90,
+    },
+    {
+      title: "Documentary",
+      level: 70,
+    },
 ];
 
 const SkillsSection = () => {
@@ -180,7 +183,7 @@ const SkillsSection = () => {
         </div>
         <div>
           <h2 className="text-3xl md:text-5xl font-bold mt-10 text-white">
-            Languages
+            Narrative Areas
           </h2>
           <div className="mt-8 space-y-4">
             {languages.map((lng, index) => (
@@ -266,10 +269,10 @@ const ContactSection = () => {
   const [state, handleSubmit] = useForm("mayzgjbd");
   return (
     <Section>
-      <h2 className="text-3xl md:text-5xl font-bold">Contact me</h2>
+      <h2 className="text-3xl md:text-5xl font-bold">Contáctame</h2>
       <div className="mt-8 p-8 rounded-md bg-white bg-opacity-50 w-96 max-w-full">
         {state.succeeded ? (
-          <p className="text-gray-900 text-center">Thanks for your message !</p>
+          <p className="text-gray-900 text-center">Gracias por tu mensaje !</p>
         ) : (
           <form onSubmit={handleSubmit}>
             <label for="name" className="font-medium text-gray-900 block mb-1">

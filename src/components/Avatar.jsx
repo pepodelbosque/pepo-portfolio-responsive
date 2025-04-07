@@ -23,13 +23,22 @@ export function Avatar(props) {
   const { animations: fallingAnimation } = useFBX(
     "animations/Falling Idle.fbx"
   );
+  const { animations: DancingAnimation } = useFBX(
+    "animations/Dancing.fbx"
+  );
+  const { animations: KneelingAnimation } = useFBX(
+    "animations/Kneeling2.fbx"
+  );
+
 
   typingAnimation[0].name = "Typing";
   standingAnimation[0].name = "Standing";
   fallingAnimation[0].name = "Falling";
+  DancingAnimation[0].name = "Dancing";
+  KneelingAnimation[0].name = "Kneeling2";
 
   const { actions } = useAnimations(
-    [typingAnimation[0], standingAnimation[0], fallingAnimation[0]],
+    [typingAnimation[0], standingAnimation[0], fallingAnimation[0], DancingAnimation[0], KneelingAnimation[0],],  
     group
   );
 
@@ -58,7 +67,7 @@ export function Avatar(props) {
 
   return (
     <group {...props} ref={group} dispose={null}>
-      <group>
+      <group scale={2.5}>
         <primitive object={nodes.Hips} />
         <skinnedMesh
           frustumCulled={false}
